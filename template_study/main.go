@@ -13,10 +13,10 @@ type User struct {
 	Age    int
 }
 
-// 1. hello.tmpl 就是第一步定义模板
+// 1. f.tmpl 就是第一步定义模板
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	// 2.解析模板
-	t, err := template.ParseFiles("./hello.tmpl") // 不能直接右键Run go build
+	t, err := template.ParseFiles("./f.tmpl") // 不能直接右键Run go build
 	if err != nil {
 		fmt.Printf("Parse template failed, err:%v", err)
 		return

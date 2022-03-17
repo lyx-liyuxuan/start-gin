@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-// 1. hello.tmpl 就是第一步定义模板
+// 1. f.tmpl 就是第一步定义模板
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	// 2.解析模板
 	t, err := template.ParseFiles("./hello.tmpl") // 不能直接右键Run go build
@@ -19,6 +19,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 	err = t.Execute(w, name)
 	if err != nil {
 		fmt.Printf("render template failed, err:%v", err)
+
 		return
 	}
 }
@@ -27,7 +28,7 @@ func main() {
 	http.HandleFunc("/", sayHello)
 	err := http.ListenAndServe(":9000", nil)
 	if err != nil {
-		fmt.Printf("HTTP server start failed, err:%v", err)
+		fmt.Printf("HTTP server start failed, err:%v \n", err)
 		return
 	}
 }
