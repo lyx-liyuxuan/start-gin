@@ -7,7 +7,7 @@ import (
 )
 
 func sayhello(w http.ResponseWriter, r *http.Request) {
-	b, _ := ioutil.ReadFile("../github/start-gin/gin_demo/hello.txt")
+	b, _ := ioutil.ReadFile("../start-gin/http_demo/hello.txt")
 	fmt.Printf("b: %v\n", b)
 	_, _ = fmt.Fprintln(w, string(b))
 }
