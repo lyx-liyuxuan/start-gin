@@ -17,7 +17,6 @@ REST(Representational State Transfer),资源表现形式的状态转换
 - DELETE方法删除资源
 
 ## Gin渲染
-`
 模板引擎的使用分三步：定义模板、解析模板、渲染模板
 - 定义模板  
 创建 `.tmpl` 模板文件
